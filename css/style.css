@@ -201,39 +201,6 @@ font-family: 'Metrophobic', sans-serif;
 	text-align: center;
 }
 
-/*#cont {
-  height: 900px;
-  overflow: hidden;
-	background-color:yellow;
-}
-
-#paper-itinerary {
-	background-color: blue;
-	height: 600px;
-  	width: 600px;
-	border-radius: 5px;
-  
- 	box-shadow: 0 0 10px black;
-margin-left:200px;
-margin-right: 200px;
-margin-top: 100px;
-position:absolute;
-  
-}
-
-#itinerary-body{
-	font-family: 'Metrophobic', sans-serif;
-	font-size: 24px;
-	margin: 0 auto;
-	text-align: left;
-	background-color:green;
-}
-
-#itinerary-header{
-
-}*/
-
-
 .thing{
 	padding-top:5px;
 	font-family: 'Metrophobic', sans-serif;

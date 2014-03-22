@@ -44,14 +44,10 @@ $(function(){
 			if(this.checked){
 				parameters.push(this.value);
 			}
-			// console.log(sThisVal);
+			
 		});
 
-		// console.log(location);
-		// var currentLoc = new google.maps.LatLng(location['k'], location['A']);
-		// console.log(currentLoc);
-		// var searchQuery = "https://maps.googleapis.com/maps/api/place/search/json?location="+location+"&radius=400&sensor=false&key="+key;
-
+		
 		var request = {
 		    location: location,
 		    radius: 500,
@@ -62,17 +58,15 @@ $(function(){
 
 		service.nearbySearch(request, function(results, status){
 			console.log("SEARCHING");
-			// console.log(google.maps.places.PlacesServiceStatus);
-			// var status = "OK";
+			
 			if (status == google.maps.places.PlacesServiceStatus.OK) {
-				// console.log("OK");
+				
 			    for (var i = 0; i < results.length; i++) {
 			      var place = results[i];
-			      // console.log(place);
+			      
 
 			      thingsToDo.push(place);
 
-			      // createMarker(results[i]);
 		    }
 
 		    var random;
@@ -83,7 +77,6 @@ $(function(){
 			for (var i = 0; i < durationLength; i++) {
 				
 				var day = i + 1;
-				// var header = $("<div class='day-header'>Day "+day+"</div>")
 				
 				var item = $("<li class='item' id='"+itemCounter+"'><div class='day-header'>Day "+day+"</div></li>");
 				$('.to-do').append(item);
@@ -102,13 +95,10 @@ $(function(){
 				itemCounter = itemCounter + 1;
 				
 			};
-		    // else {
-		    // 	console.log("Status not ok");
-		    // }
+
 		  }
 		});
 
-		// console.log(searchQuery);
 	}
 
 	// first screen
@@ -117,10 +107,10 @@ $(function(){
 			var location = $('#location').val();
 			$('.screen2').show();
 
-			// console.log("k,BFJKJDE");
 			codeAddress(location);
 
 			$('html, body').stop();
+
 			// scroll to second div
 			$('html, body').animate({
 				scrollTop: $('.screen2').offset().top
@@ -146,6 +136,7 @@ $(function(){
 	$('#maketravelist').click(function(){
 		$('.screen3').show();
 		$('html, body').stop();
+		
 		// scroll to second div
 		$('html, body').animate({
 			scrollTop: $('.screen3').offset().top

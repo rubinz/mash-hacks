@@ -63,7 +63,10 @@ table {
 .screen3{
 	/*display:none;*/
 	height:	900px;
-	background-color:red;
+	background-color:#bdc3c7;
+	position: relative;
+
+	overflow: hidden;
 }
 
 
@@ -175,17 +178,25 @@ font-family: 'Metrophobic', sans-serif;
 .paper{
 	height: 900px;
   overflow: hidden;
-	background-color:yellow;
+	background-color:#fff;
 	width:50%;
 	margin: 0 auto;
+	margin-top: 40px;
+	margin-left: 27%;
 	padding-top:20px;
+	position: absolute;
+
+	border-radius: 5px;
+	box-shadow: 0 0 10px black;
+
+
 }
 
 
 #itinerarytitle{
 	font-family: 'Metrophobic', sans-serif;
 	font-size: 24px;
-	background-color: yellow;
+	/*background-color: yellow;*/
 	margin: 0 auto;
 	text-align: center;
 }

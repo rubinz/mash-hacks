@@ -74,12 +74,13 @@ table {
 	width:50%;
 	padding-top:200px;
 	height:100%;
-	text-align: center;
+	
 
 }
 
 #screen2-right p{
 	font-size: 24px;
+	text-align: center;
 }
 
 #locationquestion{
@@ -96,7 +97,8 @@ table {
 }
 
 #checkbox{
-	font-size:12px;
-	text-align: center;
+	font-size:14px;
 	margin:0 auto;
+	background-color:red;
+	width:40%
 }

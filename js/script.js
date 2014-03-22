@@ -13,14 +13,19 @@ $(function(){
 			location = $('#location').val();
 			$('.screen2').show();
 
+			// console.log("k,BFJKJDE");
+
+			$('html, body').stop();
 			// scroll to second div
-			$('body,html').animate({
-				scrollTop: $('.screen2').position.top()
+			$('html, body').animate({
+				scrollTop: $('.screen2').offset().top
 			}, 'slow');
 
 		} else {
 			alert("Please enter a location");
 		}
+
+		return false;
 	});
 
 	// get vacation duration

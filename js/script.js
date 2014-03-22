@@ -1,7 +1,8 @@
 $(function(){
 
 	var location = "";
-	var duration = "";
+	var durationLength = "";
+	var durationUnits = "";
 	var parameters = new Array();
 
 
@@ -21,7 +22,15 @@ $(function(){
 		}
 	});
 
-	()
+	// get vacation duration
+	$('#lengthofstay').change(function(){
+		durationLength = $('#lengthofstay').val();
+	});
 
+	$('.units').change(function(){
+		durationUnits = $('#units').val();
+	});
+
+	
 
 });

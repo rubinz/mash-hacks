@@ -50,11 +50,14 @@ table {
 	padding-top: 300px;
 
 }
-
 #location{
-
+	font-family: Arial;
+	font-size: 16px;
+}
+#location{
+		
 }
 
 #submitlocation{
-		
+
 }

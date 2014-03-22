@@ -26,7 +26,7 @@ $(function(){
 	      if (status == google.maps.GeocoderStatus.OK) {
 	        
 
-	    	console.log(results[0].geometry.location);
+	    	// console.log(results[0].geometry.location);
 	    	locationToSearch = results[0].geometry.location;
 
 	      } else {
@@ -40,11 +40,13 @@ $(function(){
 
 
 		$('[type=checkbox]').each(function(){
-			var sThisVal = (this.checked ? $(this).val() : "");
-			console.log(sThisVal);
+			if(this.checked){
+				parameters.push(this.value);
+			}
+			// console.log(sThisVal);
 		});
 
-		console.log(location);
+		// console.log(location);
 		// var currentLoc = new google.maps.LatLng(location['k'], location['A']);
 		// console.log(currentLoc);
 		// var searchQuery = "https://maps.googleapis.com/maps/api/place/search/json?location="+location+"&radius=400&sensor=false&key="+key;
@@ -52,20 +54,25 @@ $(function(){
 		var request = {
 		    location: location,
 		    radius: 500,
-		    types: ['restaurant']
+		    types: parameters
 		};
+
+		console.log(parameters);
 
 		service.nearbySearch(request, function(results, status){
 			console.log("SEARCHING");
-			console.log(google.maps.places.PlacesServiceStatus);
+			// console.log(google.maps.places.PlacesServiceStatus);
 			// var status = "OK";
 			if (status == google.maps.places.PlacesServiceStatus.OK) {
-				console.log("OK");
+				// console.log("OK");
 			    for (var i = 0; i < results.length; i++) {
 			      var place = results[i];
 			      console.log(place);
 			      // createMarker(results[i]);
 		    }
+		    // else {
+		    // 	console.log("Status not ok");
+		    // }
 		  }
 		});
 

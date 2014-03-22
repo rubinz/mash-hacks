@@ -77,11 +77,19 @@ $(function(){
 
 		    var random;
 			for (var i = 0; i < durationLength; i++) {
-				random = Math.floor(Math.random()*thingsToDo.length)
+				
 				var day = i + 1;
-				var header = $("<div class='day-header'>"+day+"</div>")
-				var item = $("<li class='item'>"+header.html()+"<div class='thing'>"+thingsToDo[random]['name']+"</div></li>");
+				// var header = $("<div class='day-header'>Day "+day+"</div>")
+				
+				var item = $("<li class='item'><div class='day-header'>Day "+day+"</div></li>");
 				$('.to-do').append(item);
+				for (var a = 0; a < parameters.length; a++) {
+					random = Math.floor(Math.random()*thingsToDo.length);
+					var vicinity = thingsToDo[random]['vicinity'];
+					var multItems = $("<div class='thing'>"+thingsToDo[random]['name']+"</div><div class='thing'>"+vicinity+"</div>");
+					$(".item").append(multItems);
+				};
+				
 			};
 		    // else {
 		    // 	console.log("Status not ok");

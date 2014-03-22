@@ -90,10 +90,18 @@ table {
 
 #location{
 	font-size: 20px;
+	border-radius:5px;
+	border:3px solid;
+	border-color:#d8d8d8;
+	font-family: 'Metrophobic', sans-serif;
+}
+
+#location.hover{
+	border-color:green;
 }
 
 #submitlocation{
-
+font-family: 'Metrophobic', sans-serif;
 }
 
 #checkbox{

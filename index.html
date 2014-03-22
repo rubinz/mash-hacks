@@ -12,9 +12,11 @@
 	<script src="js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 	<!-- Maps API -->
+	<!-- AIzaSyDxkvEZeeOg3-mlkcHpdkCUC5ws5Ltqhgc -->
 	<script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxkvEZeeOg3-mlkcHpdkCUC5ws5Ltqhgc&sensor=false">
+      src="https://maps.googleapis.com/maps/api/js?libraries=places&AIzaSyDxkvEZeeOg3-mlkcHpdkCUC5ws5Ltqhgc&sensor=false">
     </script>
+    <!-- // <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script> -->
 
 	<script src="js/jquery-1.8.3.min.js"></script>
     <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
@@ -31,6 +33,8 @@
     <script src="js/application.js"></script>
 </head>
 <body>
+	<script src="http://maps.google.com/maps/api/js?sensor=false&libraries=places"></script>
+	<div id="map-canvas" style="display:none;"></div>
 	<div class="screen1">
 
 		<!-- <p id="locationquestion">Where are you going?</p>	 -->
@@ -70,7 +74,7 @@
 		            	<span class="first-icon fui-checkbox-unchecked"></span>
 		            	<span class="second-icon fui-checkbox-checked"></span>
 		            </span>
-		            <input type="checkbox" value="" id="checkbox1" data-toggle="checkbox">
+		            <input type="checkbox" value="beach" id="checkbox1" data-toggle="checkbox">
 		            <span class="box-title">Beach</span>
 	            </label>
 	            <label class="checkbox" for="checkbox1">
@@ -78,7 +82,7 @@
 		            	<span class="first-icon fui-checkbox-unchecked"></span>
 		            	<span class="second-icon fui-checkbox-checked"></span>
 		            </span>
-		            <input type="checkbox" value="" id="checkbox1" data-toggle="checkbox">
+		            <input type="checkbox" value="shopping" id="checkbox1" data-toggle="checkbox">
 		            <span class="box-title">Shopping</span>
 	            </label>
 	            <label class="checkbox" for="checkbox1">
@@ -86,7 +90,7 @@
 		            	<span class="first-icon fui-checkbox-unchecked"></span>
 		            	<span class="second-icon fui-checkbox-checked"></span>
 		            </span>
-		            <input type="checkbox" value="" id="checkbox1" data-toggle="checkbox">
+		            <input type="checkbox" value="museums" id="checkbox1" data-toggle="checkbox">
 		            <span class="box-title">Museums</span>
 	            </label>
 	            <label class="checkbox" for="checkbox1">
@@ -94,7 +98,7 @@
 		            	<span class="first-icon fui-checkbox-unchecked"></span>
 		            	<span class="second-icon fui-checkbox-checked"></span>
 		            </span>
-		            <input type="checkbox" value="" id="checkbox1" data-toggle="checkbox">
+		            <input type="checkbox" value="restaurants" id="checkbox1" data-toggle="checkbox">
 		            <span class="box-title">Explore Restaurants</span>
 	            </label>
 	            <label class="checkbox" for="checkbox1">
@@ -102,7 +106,7 @@
 		            	<span class="first-icon fui-checkbox-unchecked"></span>
 		            	<span class="second-icon fui-checkbox-checked"></span>
 		            </span>
-		            <input type="checkbox" value="" id="checkbox1" data-toggle="checkbox">
+		            <input type="checkbox" value="gym" id="checkbox1" data-toggle="checkbox">
 		            <span class="box-title">Spa/Exercise</span>
 	            </label>
 			</div>

@@ -52,6 +52,7 @@ table {
 }
 
 .screen2{
+	display:none;
 	height:	100%;
 	background-color:blue;
 }

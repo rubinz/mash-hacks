@@ -15,6 +15,7 @@ $(function(){
 	var durationLength = "";
 	var durationUnits = "";
 	var parameters = new Array();
+	var thingsToDo = new Array();
 
 	var geocoder = new google.maps.Geocoder();
 	
@@ -68,8 +69,20 @@ $(function(){
 			    for (var i = 0; i < results.length; i++) {
 			      var place = results[i];
 			      console.log(place);
+
+			      thingsToDo.push(place);
+
 			      // createMarker(results[i]);
 		    }
+
+		    var random;
+			for (var i = 0; i < durationLength; i++) {
+				random = Math.floor(Math.random()*thingsToDo.length)
+				var day = i + 1;
+				var header = $("<div class='day-header'>"+day+"</div>")
+				var item = $("<li class='item'>"+header.html()+"<div class='thing'>"+thingsToDo[random]['name']+"</div></li>");
+				$('.to-do').append(item);
+			};
 		    // else {
 		    // 	console.log("Status not ok");
 		    // }
@@ -110,8 +123,9 @@ $(function(){
 		durationUnits = $('#units').val();
 	});
 
+	// off to third screen
 	$('#maketravelist').click(function(){
-
+		$('.screen3').show();
 		$('html, body').stop();
 		// scroll to second div
 		$('html, body').animate({

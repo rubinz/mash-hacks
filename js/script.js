@@ -68,7 +68,7 @@ $(function(){
 				// console.log("OK");
 			    for (var i = 0; i < results.length; i++) {
 			      var place = results[i];
-			      console.log(place);
+			      // console.log(place);
 
 			      thingsToDo.push(place);
 
@@ -76,19 +76,30 @@ $(function(){
 		    }
 
 		    var random;
+		    var multItems;
+		    var itemCounter = 0;
+		    $('.to-do').empty();
+
 			for (var i = 0; i < durationLength; i++) {
 				
 				var day = i + 1;
 				// var header = $("<div class='day-header'>Day "+day+"</div>")
 				
-				var item = $("<li class='item'><div class='day-header'>Day "+day+"</div></li>");
+				var item = $("<li class='item' id='"+itemCounter+"'><div class='day-header'>Day "+day+"</div></li>");
 				$('.to-do').append(item);
+
 				for (var a = 0; a < parameters.length; a++) {
 					random = Math.floor(Math.random()*thingsToDo.length);
+					// console.log(a);
 					var vicinity = thingsToDo[random]['vicinity'];
-					var multItems = $("<div class='thing-wrapper'><div class='thing'>"+thingsToDo[random]['name']+"</div><div class='thing'>"+vicinity+"</div></div>");
-					$(".item").append(multItems);
+					multItems = $("<div class='thing-wrapper'><div class='thing'>"+thingsToDo[random]['name']+"</div><div class='thing'>"+vicinity+"</div></div>");
+					console.log(multItems);
+					$(".item#"+itemCounter).append(multItems);
+					thingsToDo.splice(random, 1);
+
 				};
+
+				itemCounter = itemCounter + 1;
 				
 			};
 		    // else {

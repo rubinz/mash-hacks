@@ -1,12 +1,14 @@
 $(function(){
 
+	var key = "AIzaSyDxkvEZeeOg3-mlkcHpdkCUC5ws5Ltqhgc";
+
 	// set div to screen size
 	$('.screen1, .screen2').css({ height: $(window).innerHeight() });
 	$(window).resize(function(){
 	  $('.screen1, .screen2').css({ height: $(window).innerHeight() });
 	});
 
-	var locationToSearch = "";
+	var locationToSearch;
 	var durationLength = "";
 	var durationUnits = "";
 	var parameters = new Array();
@@ -29,7 +31,18 @@ $(function(){
 	    });
 	  }
 
+	function searchPlaces(location) {
 
+		console.log("LOCATION: "+location);
+
+		// var searchQuery = "https://maps.googleapis.com/maps/api/place/search/json
+		// 				  ?location="+location+"
+		// 				  &radius=400
+		// 				  &sensor=false
+		// 				  &key="+key;
+
+		console.log(searchQuery);
+	}
 
 	// first screen
 	$('#submitlocation').click(function(){ // button click
@@ -62,6 +75,15 @@ $(function(){
 		durationUnits = $('#units').val();
 	});
 
+	$('#maketravelist').click(function(){
 
+		$('html, body').stop();
+		// scroll to second div
+		$('html, body').animate({
+			scrollTop: $('.screen3').offset().top
+		}, 'slow');
+
+		searchPlaces(locationToSearch);
+	});
 
 });

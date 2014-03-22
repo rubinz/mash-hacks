@@ -44,38 +44,56 @@ table {
 
 .screen1{
 	height:	900px;
-	background-color:red;	
+	/*background-color:red;	*/
 	min-width:900px;
 	text-align: center;
 	padding-top: 300px;
+	background-image: url('../img/city.jpg');
+	background-size: cover;
 
 }
 
 .screen2{
 	display:none;
 	height:	900px;
-	background-color:blue;
+	background-color:#bdc3c7;
+	position: relative;
+}
+
+.screen3{
+	display:none;
+	height:	900px;
+	background-color:red;
+}
+
+#itinerarytitle{
+	font-family: 'Metrophobic', sans-serif;
+	padding-top:50px;
+	font-size: 24px;
+	margin: 0 auto;
+	text-align: center;
 }
 
 #screen2-left{
 	font-family: 'Metrophobic', sans-serif;
 	font-size: 24px;
-	background-color:yellow;
+	background-color:#ecf0f1;
 	float:left;
 	width:50%;
 	padding-top:200px;
 	height:100%;
 	text-align: center;
+	position:relative;
 }
 
 #screen2-right{
 	font-family: 'Metrophobic', sans-serif;
-	background-color:green;
+	background-color:#ecf0f1;
 	float:left;
 	width:50%;
 	padding-top:200px;
 	height:100%;
-	
+	position: relative;
 
 }
 
@@ -144,4 +162,19 @@ font-family: 'Metrophobic', sans-serif;
 
 .box-title {
 	padding-left: 5px;
+}
+
+
+#maketravelist{
+	position:absolute;
+	/*bottom:0;*/
+	bottom:0;
+	margin:0 auto;
+	padding-bottom: 200px;
+	margin-left: 600px
+}
+
+#submitall{
+	font-family: 'Metrophobic', sans-serif;
+	width: 200px;
 }

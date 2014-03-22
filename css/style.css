@@ -57,20 +57,29 @@ table {
 }
 
 #screen2-left{
+	font-family: 'Metrophobic', sans-serif;
+	font-size: 24px;
 	background-color:yellow;
 	float:left;
 	width:50%;
 	padding-top:200px;
 	height:100%;
+	text-align: center;
 }
 
 #screen2-right{
-	background-color:black;
+	font-family: 'Metrophobic', sans-serif;
+	background-color:green;
 	float:left;
 	width:50%;
 	padding-top:200px;
 	height:100%;
+	text-align: center;
 
+}
+
+#screen2-right p{
+	font-size: 24px;
 }
 
 #locationquestion{
@@ -84,4 +93,10 @@ table {
 
 #submitlocation{
 
+}
+
+#checkbox{
+	font-size:12px;
+	text-align: center;
+	margin:0 auto;
 }

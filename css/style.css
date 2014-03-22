@@ -235,6 +235,7 @@ position:absolute;
 
 
 .thing{
+	padding-top:5px;
 	font-family: 'Metrophobic', sans-serif;
 	font-size: 20;
 
@@ -243,8 +244,12 @@ position:absolute;
 .day-header{
 	font-family: 'Metrophobic', sans-serif;
 	font-size: 22;
+	font-weight: bold;
 }
 
-
+.item{
+	padding-top: 40px;
+	padding-left: 60px;
+}
 
 

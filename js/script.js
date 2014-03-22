@@ -5,6 +5,7 @@ $(function(){
 	var durationUnits = "";
 	var parameters = new Array();
 
+	// var geocoder = new GL
 
 	// first screen
 	$('#submitlocation').click(function(){ // button click
@@ -31,6 +32,6 @@ $(function(){
 		durationUnits = $('#units').val();
 	});
 
-	
+
 
 });

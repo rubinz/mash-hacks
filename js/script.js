@@ -1,5 +1,11 @@
 $(function(){
 
+
+	$('.screen1, .screen2').css({ height: $(window).innerHeight() });
+	$(window).resize(function(){
+	  $('.screen1, .screen2').css({ height: $(window).innerHeight() });
+	});
+
 	var location = "";
 	var durationLength = "";
 	var durationUnits = "";

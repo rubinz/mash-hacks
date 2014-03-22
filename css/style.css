@@ -94,6 +94,9 @@ table {
 	border:3px solid;
 	border-color:#d8d8d8;
 	font-family: 'Metrophobic', sans-serif;
+	width:450px;
+	height:50px;
+	margin:0 auto;
 }
 
 #location.hover{
@@ -102,6 +105,18 @@ table {
 
 #submitlocation{
 font-family: 'Metrophobic', sans-serif;
+	margin:0 auto;
+	width:300px;
+}
+
+#lengthofstay{
+	font-size: 20px;
+	border-radius:5px;
+	border:3px solid;
+	border-color:#d8d8d8;
+	width:50px;
+	height:50px;
+	margin:0 auto;
 }
 
 #checkbox{

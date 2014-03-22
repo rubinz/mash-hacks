@@ -86,7 +86,7 @@ $(function(){
 				for (var a = 0; a < parameters.length; a++) {
 					random = Math.floor(Math.random()*thingsToDo.length);
 					var vicinity = thingsToDo[random]['vicinity'];
-					var multItems = $("<div class='thing'>"+thingsToDo[random]['name']+"</div><div class='thing'>"+vicinity+"</div>");
+					var multItems = $("<div class='thing-wrapper'><div class='thing'>"+thingsToDo[random]['name']+"</div><div class='thing'>"+vicinity+"</div></div>");
 					$(".item").append(multItems);
 				};
 				
